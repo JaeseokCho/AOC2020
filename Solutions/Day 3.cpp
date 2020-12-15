@@ -6,9 +6,7 @@ int main() {
     ifstream file("Inputs/Day3");
 
     string line;
-    int count = 0;
-    int check = 0;
-    int tree = 0;
+    int count = 0, tree = 0, check = 0;
 
     while (getline(file, line)){
         check = (count*3) % 31;
