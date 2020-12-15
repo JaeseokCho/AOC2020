@@ -3,4 +3,4 @@ project(AOC2020)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(AOC2020 "Solutions/Day 1.cpp")
+add_executable(AOC2020 "Solutions/Day 2.cpp")
