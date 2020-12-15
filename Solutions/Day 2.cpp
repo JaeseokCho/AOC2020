@@ -2,8 +2,6 @@
 
 using namespace std;
 
-const int Size = 1000;
-
 int main(){
     std::ifstream file("Inputs/Day2");
 
@@ -11,7 +9,8 @@ int main(){
         cout << "Error";
     }
     if (file.is_open()) {
-        int count = 0;
+        int countA = 0, countB = 0;
+
         int min, max;
         char ch;
         char pw[100];
@@ -24,13 +23,17 @@ int main(){
                 chCount[pw[i]] += 1;
             }
 
-
             if (chCount[ch] >= min && chCount[ch] <= max){
-                ++count;
+                ++countA;
+            }
+
+            if (pw[min-1] == ch ^ pw[max-1] == ch){
+                ++countB;
             }
             chCount.clear();
         }
-        cout << count << endl;
+        cout << "The solution to part A is : " << countA << endl;
+        cout << "The solution to part B is : " << countB << endl;
         return 0;
     }
 }
